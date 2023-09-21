@@ -29,7 +29,9 @@ Los objetivos de este proyecto incluyen:
 ## Recursos Adicionales
 
 - [Enlace a la página del proyecto en GitHub Pages](https://VGVarq.github.io/Proyecto-IE-2023)
-- [Documentación de las tecnologías utilizadas](https://editor.p5js.org/VGVarq/sketches/FIp8iFFBb)
+- [Documentación de las tecnologías utilizadas](https://editor.p5js.org)
+-[Ejercicio 1 P5js](https://editor.p5js.org/VGVarq/sketches/XlqSD1ofy)
+
 
 ## Licencia
 
