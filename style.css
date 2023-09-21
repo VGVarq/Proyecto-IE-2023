@@ -5,71 +5,26 @@ html, body {
   background-color: aqua;
   body {
     font-family: Arial, sans-serif;
-    background-color: #84CDD6;
+    /* Estilos generales */
+ul {
+    list-style-type: none;
+    padding: 0;
 }
 
-header {
-    background-color: #333;
-    color: pink;
-    text-align: :r;
-    padding: 1rem;
-}
-
-nav {
-    background-color: #444;
-    color: pink;
-    text-align: center;
-    padding: 1rem;
-}
-
-nav ul {
-    list-style: none;
-}
-
-nav li {
+li {
     display: inline;
-    margin-right: 20px;
+    margin-right: 10px;
+    cursor: pointer;
 }
 
-nav a {
-    text-decoration: none;
-    color: pink;
-    font-weight: bold;
-    transition: color 0.3s;
+/* Estilos para la página de inicio */
+#contenido.inicio {
+    background-color: lightgray;
+    color: blue;
 }
 
-nav a:hover {
-    color: #ff7f50;
+/* Estilos para las otras páginas */
+#contenido.pagina {
+    background-color: white;
+    color: black;
 }
-
-section {
-    padding: 2rem;
-    background-color: pink;
-    margin: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-}
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f4f4f4;
-}
-
-.countdown {
-    position: relative;
-}
-
-.timer {
-    font-size: 2rem;
-    background-color: #333;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
-}
-}
-canvas {
-  display: block;
