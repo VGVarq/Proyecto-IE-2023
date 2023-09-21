@@ -1,111 +1,112 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/addons/p5.sound.min.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
     <meta charset="utf-8" />
-    <title>Gusano en Canvas</title>
-</head>
-<body>
-    <canvas id="canvas" width="400" height="400"></canvas>
-
-    <script>
-        const canvas = document.getElementById("canvas");
-        const ctx = canvas.getContext("2d");
-
-        // Inicializamos las propiedades del gusano
-        const numCirculos = 5; // Número de círculos que componen el gusano
-        const radioCirculo = 10; // Radio de cada círculo
-        const velocidad = 2; // Velocidad de movimiento
-        const circulos = [];
-
-        // Inicializa la posición de los círculos del gusano
-        for (let i = 0; i < numCirculos; i++) {
-            circulos.push({
-                x: 50 + i * (radioCirculo * 2 + 5), // Espaciado entre los círculos
-                y: 200,
-                direccionX: 1,
-                direccionY: 0
-            });
-        }
-
-        function dibujarGusano() {
-            for (let i = 0; i < numCirculos; i++) {
-                const worm = circulos[i];
-
-                // Dibuja un círculo en la posición actual del círculo del gusano
-                const gradient = ctx.createRadialGradient(worm.x, worm.y, 0, worm.x, worm.y, radioCirculo);
-                gradient.addColorStop(0, "black");
-                gradient.addColorStop(1, "lightgray");
-                ctx.fillStyle = gradient;
-                ctx.beginPath();
-                ctx.arc(worm.x, worm.y, radioCirculo, 0, Math.PI * 2);
-                ctx.fill();
+    <head>
+        <title>Menú de Clases</title>
+        <style>
+            /* Estilos generales */
+            ul {
+                list-style-type: none;
+                padding: 0;
             }
-        }
-
-        function actualizarGusano() {
-            for (let i = 0; i < numCirculos; i++) {
-                const worm = circulos[i];
-
-                // Actualiza la posición del círculo del gusano
-                worm.x += worm.direccionX * velocidad;
-                worm.y += worm.direccionY * velocidad;
-
-                // Verifica si el círculo toca un borde y ajusta la dirección
-                if (worm.x + radioCirculo > canvas.width) {
-                    worm.x = canvas.width - radioCirculo;
-                    worm.direccionX = 0;
-                    worm.direccionY = 1;
-                } else if (worm.x - radioCirculo < 0) {
-                    worm.x = radioCirculo;
-                    worm.direccionX = 0;
-                    worm.direccionY = -1;
-                } else if (worm.y + radioCirculo > canvas.height) {
-                    worm.y = canvas.height - radioCirculo;
-                    worm.direccionX = -1;
-                    worm.direccionY = 0;
-                } else if (worm.y - radioCirculo < 0) {
-                    worm.y = radioCirculo;
-                    worm.direccionX = 1;
-                    worm.direccionY = 0;
+    
+            li {
+                display: inline;
+                margin-right: 10px;
+                cursor: pointer;
+            }
+    
+            /* Estilos para la página de inicio */
+            #contenido.inicio {
+                background-color: lightgray;
+                color: blue;
+            }
+    
+            /* Contenedor para mostrar el contenido de cada página */
+            #contenido {
+                padding: 20px;
+            }
+    
+            /* Estilos para las otras páginas */
+            #contenido.pagina {
+                background-color: white;
+                color: black;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Menú de navegación -->
+        <ul>
+            <li onclick="cambiarPagina('Clase 1')">Clase 1</li>
+            <li onclick="cambiarPagina('Clase 2')">Clase 2</li>
+            <li onclick="cambiarPagina('Clase 3')">Clase 3</li>
+            <li onclick="cambiarPagina('Clase 4')">Clase 4</li>
+            <li onclick="cambiarPagina('Clase 5')">Clase 5</li>
+        </ul>
+    
+        <!-- Contenedor para mostrar el contenido de la página actual -->
+        <div id="contenido" class="inicio">
+            Bienvenido a la página de inicio.
+        </div>
+    
+        <script>
+            // Función para cambiar la página actual
+            function cambiarPagina(pagina) {
+                // Obtiene el elemento de contenido
+                const contenido = document.getElementById("contenido");
+    
+                // Cambia el contenido según la página seleccionada
+                switch (pagina) {
+                    case 'Clase 1':
+                        contenido.innerHTML = `
+                            <h1>Clase 1</h1>
+                            <p>Este es el contenido de la Clase 1. Aquí puedes agregar texto, imágenes, enlaces, etc.</p>
+                        `;
+                        contenido.className = "pagina"; // Cambia la clase para otras páginas
+                        break;
+                    case 'Clase 2':
+                        contenido.innerHTML = `
+                            <h1>Clase 2</h1>
+                            <p>Este es el contenido de la Clase 2.</p>
+                        `;
+                        contenido.className = "pagina"; // Cambia la clase para otras páginas
+                        break;
+                    case 'Clase 3':
+                        contenido.innerHTML = `
+                            <h1>Clase 3</h1>
+                            <p>Este es el contenido de la Clase 3.</p>
+                        `;
+                        contenido.className = "pagina"; // Cambia la clase para otras páginas
+                        break;
+                    case 'Clase 4':
+                        contenido.innerHTML = `
+                            <h1>Clase 4</h1>
+                            <p>Este es el contenido de la Clase 4.</p>
+                        `;
+                        contenido.className = "pagina"; // Cambia la clase para otras páginas
+                        break;
+                    case 'Clase 5':
+                        contenido.innerHTML = `
+                            <h1>Clase 5</h1>
+                            <p>Este es el contenido de la Clase 5.</p>
+                        `;
+                        contenido.className = "pagina"; // Cambia la clase para otras páginas
+                        break;
+                    default:
+                        contenido.innerHTML = `
+                            <h1>Bienvenido a la página de inicio</h1>
+                            <p>Este es el contenido de la página de inicio.</p>
+                        `;
+                        contenido.className = "inicio"; // Restaura la clase para la página de inicio
+                        break;
                 }
             }
-        }
+        </script>
 
-        function cambiarDireccion() {
-            // Cambia la dirección de todos los círculos del gusano en respuesta a un clic en el canvas
-            for (let i = 0; i < numCirculos; i++) {
-                const worm = circulos[i];
-                worm.direccionX *= -1;
-                worm.direccionY *= -1;
-            }
-        }
-
-        canvas.addEventListener("click", cambiarDireccion);
-
-        function animar() {
-            // Limpia el canvas
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-            // Dibuja el gusano
-            dibujarGusano();
-
-            // Actualiza la posición del gusano
-            actualizarGusano();
-
-            // Solicita un nuevo frame de animación
-            requestAnimationFrame(animar);
-        }
-
-        // Inicia la animación
-        animar();
-    </script>
 </body>
 </html>
-
-
-
 
 
