@@ -1,30 +1,133 @@
+
+/* Importa la fuente 'Mooli' de Google Fonts */
+@import url('https://fonts.google.com/specimen/Mooli');
+
+/* Define un box model consistente y aplica la fuente 'Mooli' a todos los elementos y al elemento HTML */
+*, html{
+  box-sizing: border-box; /* Asegura que el padding y el borde se incluyan en el tamaño total del elemento */
+  font-family:'Mooli', sans-serif; /* Establece la fuente 'Mooli' como fuente principal, con una fuente sans-serif como alternativa */
+}
+
+/* Elimina los márgenes y el padding predeterminados del navegador para los elementos html y body */
 html, body {
-  margin: 20
-    ;
+  margin: 0;
   padding: 0;
-  background-color: aqua;
-  body {
-    font-family: Arial, sans-serif;
-    /* Estilos generales */
-ul {
-    list-style-type: none;
-    padding: 0;
 }
 
-li {
-    display: inline;
-    margin-right: 10px;
-    cursor: pointer;
+#left,
+#right{
+  height: 100vh;
 }
 
-/* Estilos para la página de inicio */
-#contenido.inicio {
-    background-color: lightgray;
-    color: blue;
+a{
+  color: rgb(0, 0, 0);
+  font-weight: bolder;
+  text-shadow: 1px 1px 2px rgba(246, 246, 246, 0.695);
 }
 
-/* Estilos para las otras páginas */
-#contenido.pagina {
-    background-color: white;
-    color: black;
+code{
+  display: inline-block;
+  word-break: keep-all;
+  font-family: monospace;
+  background-color: rgba(255, 255, 255, 0.338);
+  padding: 0 .5ex;
+  border-radius: .5ex;
+}
+/* Elimina los márgenes predeterminados del navegador para los elementos canvas */
+canvas {
+  margin: 0;
+}
+
+/* Define una cuadrícula de dos columnas iguales para el elemento <main> */
+main{
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Divide el espacio disponible en dos columnas de igual tamaño */
+}
+
+/* Establece propiedades para el elemento con id="left" */
+#left{
+  padding: 5vw; /* Agrega un padding de 3em alrededor del contenido */
+  /* Define un degradado lineal vertical para el fondo, desde un gris claro en la parte superior hasta un gris más oscuro en la parte inferior */
+  background: linear-gradient(180deg, rgba(215,215,215,1) 0%, rgba(128,128,128,1) 100%);
+}
+
+.content nav{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 2em;
+}
+
+.content nav a{
+  text-decoration: none;
+}
+
+.content nav a img{
+  width: 100%;
+  border-radius: 1ex;
+  margin-bottom: 1ex;
+  border: 3px solid transparent;
+}
+
+.content nav a:hover img{
+  width: 100%;
+  border-radius: 1ex;
+  border: 3px solid black;
+  box-shadow: 0 -10px 0 black;
+}
+
+/* Establece el tamaño de fuente para los elementos <h1> */
+h1{
+  font-size: 3em; /* Establece el tamaño de fuente en 3em */
+}
+
+/* Establece el tamaño de fuente para los elementos <p> dentro del elemento con id="left" */
+#left li,
+#left p{
+  font-size: 1.44vw; /* Establece el tamaño de fuente en 1.5em */
+  text-align: justify;
+  hyphens: auto;
+  line-height: 1.32em;
+}
+
+#slider{
+  margin-top: 2em;
+}
+/* Establece propiedades para el elemento con id="right" */
+#right{
+  /* Define un degradado lineal horizontal para el fondo, desde un gris claro en la izquierda hasta un gris más oscuro en la derecha */
+  background: linear-gradient(0deg, rgba(215,215,215,1) 0%, rgba(128,128,128,1) 100%);
+}
+
+@media only screen and (max-width: 399px) {
+  main{
+    grid-template-columns: 1fr; /* sólo una columna */
+  }
+
+  #left{
+    height: auto;
+  }
+
+  #left p{
+    font-size: 1em; 
+    line-height: 1.4em;
+  }
+
+  #right{
+    height: 100vw;
+  }
+}
+
+/* 
+   todos los estilos a continuación se hicieron con esta herramienta:
+   https://range-input-css.netlify.app/
+   para darle estilo al input "range", que es el slider.
+*/
+
+/*********** Baseline, reset styles ***********/
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  width: 100%;
 }
