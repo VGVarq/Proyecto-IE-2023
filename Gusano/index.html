@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/addons/p5.sound.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8" />
+    <title>Gusano en Canvas</title>
+</head>
+<body>
+    <canvas id="canvas" width="400" height="400"></canvas>
+
+    <script>
+        const canvas = document.getElementById("canvas");
+        const ctx = canvas.getContext("2d");
+
+        // Inicializamos las propiedades del gusano
+        const numCirculos = 5; // Número de círculos que componen el gusano
+        const radioCirculo = 10; // Radio de cada círculo
+        const velocidad = 2; // Velocidad de movimiento
+        const circulos = [];
+
+        // Inicializa la posición de los círculos del gusano
+        for (let i = 0; i < numCirculos; i++) {
+            circulos.push({
+                x: 50 + i * (radioCirculo * 2 + 5), // Espaciado entre los círculos
+                y: 200,
+                direccionX: 1,
+                direccionY: 0
+            });
+        }
+
+        function dibujarGusano() {
+            for (let i = 0; i < numCirculos; i++) {
+                const worm = circulos[i];
+
+                // Dibuja un círculo en la posición actual del círculo del gusano
+                const gradient = ctx.createRadialGradient(worm.x, worm.y, 0, worm.x, worm.y, radioCirculo);
+                gradient.addColorStop(0, "black");
+                gradient.addColorStop(1, "lightgray");
+                ctx.fillStyle = gradient;
+                ctx.beginPath();
+                ctx.arc(worm.x, worm.y, radioCirculo, 0, Math.PI * 2);
+                ctx.fill();
+            }
+        }
+
+        function actualizarGusano() {
+            for (let i = 0; i < numCirculos; i++) {
+                const worm = circulos[i];
+
+                // Actualiza la posición del círculo del gusano
+                worm.x += worm.direccionX * velocidad;
+                worm.y += worm.direccionY * velocidad;
+
+                // Verifica si el círculo toca un borde y ajusta la dirección
+                if (worm.x + radioCirculo > canvas.width) {
+                    worm.x = canvas.width - radioCirculo;
+                    worm.direccionX = 0;
+                    worm.direccionY = 1;
+                } else if (worm.x - radioCirculo < 0) {
+                    worm.x = radioCirculo;
+                    worm.direccionX = 0;
+                    worm.direccionY = -1;
+                } else if (worm.y + radioCirculo > canvas.height) {
+                    worm.y = canvas.height - radioCirculo;
+                    worm.direccionX = -1;
+                    worm.direccionY = 0;
+                } else if (worm.y - radioCirculo < 0) {
+                    worm.y = radioCirculo;
+                    worm.direccionX = 1;
+                    worm.direccionY = 0;
+                }
+            }
+        }
+
+        function cambiarDireccion() {
+            // Cambia la dirección de todos los círculos del gusano en respuesta a un clic en el canvas
+            for (let i = 0; i < numCirculos; i++) {
+                const worm = circulos[i];
+                worm.direccionX *= -1;
+                worm.direccionY *= -1;
+            }
+        }
+
+        canvas.addEventListener("click", cambiarDireccion);
+
+        function animar() {
+            // Limpia el canvas
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            // Dibuja el gusano
+            dibujarGusano();
+
+            // Actualiza la posición del gusano
+            actualizarGusano();
+
+            // Solicita un nuevo frame de animación
+            requestAnimationFrame(animar);
+        }
+
+        // Inicia la animación
+        animar();
+    </script>
+</body>
+</html>
+
+
+
+
+
