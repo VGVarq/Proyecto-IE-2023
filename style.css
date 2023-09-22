@@ -46,7 +46,7 @@ main{
 #left{
   padding: 5vw; /* Agrega un padding de 3em alrededor del contenido */
   /* Define un degradado lineal vertical para el fondo, desde un gris claro en la parte superior hasta un gris más oscuro en la parte inferior */
-  background: linear-gradient(180deg, rgba(167, 67, 182,1) 0%, rgba(255, 255,255,1) 100%);
+  background: linear-gradient(180deg, rgba(167,67,82,1) 0%, rgba(255,255,255,1) 100%);
 }
 
 .content nav{
