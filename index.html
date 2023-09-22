@@ -1,113 +1,34 @@
 <!DOCTYPE html>
-<html>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/addons/p5.sound.min.js"></script>
-    <meta charset="utf-8" />
+<html lang="es">
     <head>
-
-        <title>Menú de Clases</title>
+        <title>doble página</title>
         <link rel="stylesheet" type="text/css" href="style.css">
-        <style>
-        
-            ul {
-                list-style-type: none;
-                padding: 0;
-            }
-    
-            li {
-                display: inline;
-                margin-right: 10px;
-                cursor: pointer;
-            }
-    
-            
-            #contenido.inicio {
-                background-color: lightgray;
-                color: blue;
-            }
-    
-          
-            #contenido {
-                padding: 20px;
-            }
-    
-            
-            #contenido.pagina {
-                background-color: white;
-                color: black;
-            }
-        </style>
+        <script src="p5.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/addons/p5.sound.min.js"></script>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
-    <body>
-        <!-- Menú de navegación -->
-        <ul>
-            <li onclick="cambiarPagina('Clase 1')">Clase 1</li>
-            <li onclick="cambiarPagina('Clase 2')">Clase 2</li>
-            <li onclick="cambiarPagina('Clase 3')">Clase 3</li>
-            <li onclick="cambiarPagina('Clase 4')">Clase 4</li>
-            <li onclick="cambiarPagina('Clase 5')">Clase 5</li>
-        </ul>
-    
-        <!-- Contenedor para mostrar el contenido de la página actual -->
-        <div id="contenido" class="inicio">
-            Bienvenido a la página de inicio.
+ <body>
+    <main>
+      <div id="left">
+        <h1>Proyecto Imagen Escrita 2023</h1>
+        <div class="content">
+         <nav>
+            <a href="Gusano/"><img src="img/img1.png" alt="Primer ejercicio">Primer ejercicio</a>
+            <a href="Pajaros/"><img src="img/img2.png" alt="Árboles a partir de objetos">Árboles a partir de objetos</a>
+         </nav>
         </div>
-    
-        <script>
-            // Función para cambiar la página actual
-            function cambiarPagina(pagina) {
-                // Obtiene el elemento de contenido
-                const contenido = document.getElementById("contenido");
-    
-                // Cambia el contenido según la página seleccionada
-                switch (pagina) {
-                    case 'Clase 1':
-                        contenido.innerHTML = `
-                            <h1>Clase 1</h1>
-                            <p>Este es el contenido de la Clase 1. Aquí puedes agregar texto, imágenes, enlaces, etc.</p>
-                        `;
-                        contenido.className = "pagina"; // Cambia la clase para otras páginas
-                        break;
-                    case 'Clase 2':
-                        contenido.innerHTML = `
-                            <h1>Clase 2</h1>
-                            <p>Este es el contenido de la Clase 2.</p>
-                        `;
-                        contenido.className = "pagina"; // Cambia la clase para otras páginas
-                        break;
-                    case 'Clase 3':
-                        contenido.innerHTML = `
-                            <h1>Clase 3</h1>
-                            <p>Este es el contenido de la Clase 3.</p>
-                        `;
-                        contenido.className = "pagina"; // Cambia la clase para otras páginas
-                        break;
-                    case 'Clase 4':
-                        contenido.innerHTML = `
-                            <h1>Clase 4</h1>
-                            <p>Este es el contenido de la Clase 4.</p>
-                        `;
-                        contenido.className = "pagina"; // Cambia la clase para otras páginas
-                        break;
-                    case 'Clase 5':
-                        contenido.innerHTML = `
-                            <h1>Clase 5</h1>
-                            <p>Este es el contenido de la Clase 5.</p>
-                        `;
-                        contenido.className = "pagina"; // Cambia la clase para otras páginas
-                        break;
-                    default:
-                        contenido.innerHTML = `
-                            <h1>Bienvenido a la página de inicio</h1>
-                            <p>Este es el contenido de la página de inicio.</p>
-                        `;
-                        contenido.className = "inicio"; // Restaura la clase para la página de inicio
-                        break;
-                }
-            }
-        </script>
-
-</body>
+        <div id="slider"></div>
+        <p style="font-size: .89em">ver <a href="https://github.com/VGVarq/Proyecto-IE-2023">código fuente</a>.</p>
+     </div>
+      <div id="right"></div>
+    </main>
+    <script src="sketch.js"></script>
+  </body>
 </html>
+    
+
+       
 
 
