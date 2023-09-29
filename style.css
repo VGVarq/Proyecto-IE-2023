@@ -16,7 +16,7 @@ html, body {
 }
 
 #left,
-#medium
+#medium,
 #right{
   height: 100vh;
 }
@@ -90,14 +90,14 @@ h1{
 }
 
 #medium{
-background: white
+background: red
 }
 
 #slider{
   margin-top: 2em;
 }
 #right{
-  background: red
+  background: white
 }
 
 /* Estilos para la página de inicio */
