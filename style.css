@@ -16,6 +16,7 @@ html, body {
 }
 
 #left,
+#medium
 #right{
   height: 100vh;
 }
@@ -43,11 +44,11 @@ main{
   grid-template-columns: 1fr 1fr 1fr; 
 }
 
-/* Establece propiedades para el elemento con id="left" */
+
 #left{
-  padding: 5vw; /* Agrega un padding de 3em alrededor del contenido */
-  /* Define un degradado lineal vertical para el fondo, desde un gris claro en la parte superior hasta un gris más oscuro en la parte inferior */
-  background: aqua
+  padding: 5vw;
+  background: green
+
 }
 
 .content nav{
@@ -88,13 +89,15 @@ h1{
   line-height: 1.32em;
 }
 
+#medium{
+background: white
+}
+
 #slider{
   margin-top: 2em;
 }
-/* Establece propiedades para el elemento con id="right" */
 #right{
-  /* Define un degradado lineal horizontal para el fondo, desde un gris claro en la izquierda hasta un gris más oscuro en la derecha */
-  background: linear-gradient(0deg, rgba(215,215,215,1) 0%, rgba(128,128,128,1) 100%);
+  background: red
 }
 
 /* Estilos para la página de inicio */
