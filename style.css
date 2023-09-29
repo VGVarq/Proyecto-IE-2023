@@ -10,23 +10,11 @@
 
 /* Elimina los márgenes y el padding predeterminados del navegador para los elementos html y body */
 html, body {
-  margin: 20
-    ;
   margin: 0;
   padding: 0;
-  background-color: aqua;
-  body {
-    font-family: Arial, sans-serif;
-    /* Estilos generales */
-ul {
-    list-style-type: none;
-    padding: 0;
+ 
 }
 
-li {
-    display: inline;
-    margin-right: 10px;
-    cursor: pointer;
 #left,
 #right{
   height: 100vh;
@@ -46,23 +34,20 @@ code{
   padding: 0 .5ex;
   border-radius: .5ex;
 }
-/* Elimina los márgenes predeterminados del navegador para los elementos canvas */
 canvas {
   margin: 0;
 }
 
-/* Define una cuadrícula de dos columnas iguales para el elemento <main> */
 main{
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Divide el espacio disponible en dos columnas de igual tamaño */
+  grid-template-columns: 1fr 1fr 1fr; 
 }
 
 /* Establece propiedades para el elemento con id="left" */
 #left{
   padding: 5vw; /* Agrega un padding de 3em alrededor del contenido */
   /* Define un degradado lineal vertical para el fondo, desde un gris claro en la parte superior hasta un gris más oscuro en la parte inferior */
-  background: linear-gradient(180deg, rgba(215,215,215,1) 0%, rgba(128,128,128,1) 100%);
-  background: linear-gradient(180deg, rgba(167, 67, 182,1) 0%, rgba(255, 255,255,1) 100%);
+  background: aqua
 }
 
 .content nav{
