@@ -16,7 +16,6 @@ html, body {
 }
 
 #left,
-#medium,
 #right{
   height: 100vh;
 }
@@ -87,10 +86,6 @@ h1{
   text-align: justify;
   hyphens: auto;
   line-height: 1.32em;
-}
-
-#medium{
-background: red
 }
 
 #slider{
