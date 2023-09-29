@@ -12,9 +12,11 @@
 html, body {
   margin: 0;
   padding: 0;
+ 
 }
 
 #left,
+#medium,
 #right{
   height: 100vh;
 }
@@ -33,24 +35,25 @@ code{
   padding: 0 .5ex;
   border-radius: .5ex;
 }
-/* Elimina los márgenes predeterminados del navegador para los elementos canvas */
 canvas {
   margin: 0;
 }
 
-/* Define una cuadrícula de dos columnas iguales para el elemento <main> */
 main{
   display: grid;
+  grid-template-columns: 1fr 1fr 1fr; 
+}
 
-/* Establece propiedades para el elemento con id="left" */
+
 #left{
-  padding: 5vw; /* Agrega un padding de 3em alrededor del contenido */
-  /* Define un degradado lineal vertical para el fondo, desde un gris claro en la parte superior hasta un gris más oscuro en la parte inferior */
-  background: linear-gradient(180deg, rgba(167,67,82,1) 0%, rgba(255,255,255,1) 100%);
+  padding: 5vw;
+  background: green
+
 }
 
 .content nav{
   display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 2em;
 }
 
@@ -86,15 +89,21 @@ h1{
   line-height: 1.32em;
 }
 
+#medium{
+background: red
+}
+
 #slider{
   margin-top: 2em;
 }
-/* Establece propiedades para el elemento con id="right" */
 #right{
-  /* Define un degradado lineal horizontal para el fondo, desde un gris claro en la izquierda hasta un gris más oscuro en la derecha */
-  background: linear-gradient(0deg, rgba(215,215,215,1) 0%, rgba(128,128,128,1) 100%);
+  background: white
 }
 
+/* Estilos para la página de inicio */
+#contenido.inicio {
+    background-color: lightgray;
+    color: blue;
 @media only screen and (max-width: 399px) {
   main{
     grid-template-columns: 1fr; /* sólo una columna */
@@ -114,6 +123,10 @@ h1{
   }
 }
 
+/* Estilos para las otras páginas */
+#contenido.pagina {
+    background-color: white;
+    color: black;
 /* 
    todos los estilos a continuación se hicieron con esta herramienta:
    https://range-input-css.netlify.app/
