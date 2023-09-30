@@ -1,32 +1,34 @@
-
 /* Importa la fuente 'Mooli' de Google Fonts */
-@import url('https://fonts.google.com/specimen/Mooli');
+@import url('https://fonts.googleapis.com/css2?family=Mooli&display=swap');
 
 /* Define un box model consistente y aplica la fuente 'Mooli' a todos los elementos y al elemento HTML */
-*, html{
-  box-sizing: border-box; /* Asegura que el padding y el borde se incluyan en el tamaño total del elemento */
-  font-family:'Mooli', sans-serif; /* Establece la fuente 'Mooli' como fuente principal, con una fuente sans-serif como alternativa */
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Mooli', sans-serif;
 }
 
 /* Elimina los márgenes y el padding predeterminados del navegador para los elementos html y body */
-html, body {
+body {
   margin: 0;
   padding: 0;
- 
 }
-.primero{
+
+.primero {
   background: green;
 }
 
-.segundo{
-  background: white
+.segundo {
+  background: white;
 }
 
-.tercero{
-  background: red
+.tercero {
+  background: red;
 }
 
-#grilla{
+#grilla {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 20px;
@@ -34,13 +36,13 @@ html, body {
   height: 100vh;
 }
 
-a{
+a {
   color: rgb(0, 0, 0);
   font-weight: bolder;
   text-shadow: 1px 1px 2px rgba(246, 246, 246, 0.695);
 }
 
-code{
+code {
   display: inline-block;
   word-break: keep-all;
   font-family: monospace;
@@ -48,36 +50,34 @@ code{
   padding: 0 .5ex;
   border-radius: .5ex;
 }
+
 canvas {
   margin: 0;
 }
 
-main{
+main {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr; 
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
-
-}
-
-.content nav{
+.content nav {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 2em;
 }
 
-.content nav a{
+.content nav a {
   text-decoration: none;
 }
 
-.content nav a img{
+.content nav a img {
   width: 100%;
   border-radius: 1ex;
   margin-bottom: 1ex;
   border: 3px solid transparent;
 }
 
-.content nav a:hover img{
+.content nav a:hover img {
   width: 100%;
   border-radius: 1ex;
   border: 3px solid black;
@@ -85,49 +85,45 @@ main{
 }
 
 /* Establece el tamaño de fuente para los elementos <h1> */
-h1{
+h1 {
   font-size: 3em; /* Establece el tamaño de fuente en 3em */
 }
 
 /* Establece el tamaño de fuente para los elementos <p> dentro del elemento con id="left" */
 .primero li,
-.primero p{
-  font-size: 1.44vw; /* Establece el tamaño de fuente en 1.5em */
+.primero p {
+  font-size: 1.44vw; /* Establece el tamaño de fuente en 1.44vw */
   text-align: justify;
   hyphens: auto;
   line-height: 1.32em;
 }
 
-}
-
 /* Estilos para la página de inicio */
 #contenido.inicio {
-    background-color: lightgray;
-    color: blue;
+  background-color: lightgray;
+  color: blue;
+  grid-template-columns: 1fr; /* Solo una columna */
+}
 
-    grid-template-columns: 1fr; /* sólo una columna */
-  }
+.primero {
+  height: auto;
+}
 
-  .primero{
-    height: auto;
-  }
+.primero p {
+  font-size: 1em;
+  line-height: 1.4em;
+}
 
-  .primero p{
-    font-size: 1em; 
-    line-height: 1.4em;
-  }
-
-.segundo{
+.segundo {
   height: 50vw;
-  }
+}
 
-  .tercero{
-    height: 100vw;
-  }
+.tercero {
+  height: 100vw;
 }
 
 /* Estilos para las otras páginas */
 #contenido.pagina {
-    background-color: white;
-    color: black;
+  background-color: white;
+  color: black;
 }
