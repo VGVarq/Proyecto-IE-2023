@@ -31,15 +31,8 @@ body {
 #grilla {
   display: grid;
   grid-template-columns: 200px 200px 200px;
-  grid-gap: 15px;
-  margin: 12px 60px;
-  height: 100vh;
-}
+  grid-gap: 20px;
 
-a {
-  color: rgb(0, 0, 0);
-  font-weight: bolder;
-  text-shadow: 1px 1px 2px rgba(246, 246, 246, 0.695);
 }
 
 code {
@@ -50,11 +43,6 @@ code {
   padding: 0 .5ex;
   border-radius: .5ex;
 }
-
-canvas {
-  margin: 0;
-}
-
 
 .content nav {
   display: grid;
@@ -111,4 +99,12 @@ h1 {
 #contenido.pagina {
   background-color: white;
   color: black;
+}
+
+.tercero li,
+.tercero p {
+  text-align: justify;
+  hyphens: auto;
+  line-height: 1.32em;
+  grid-template-columns: 1fr 1fr 1fr
 }
