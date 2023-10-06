@@ -46,11 +46,7 @@ code {
   border-radius: .5ex;
 }
 
-.content nav {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 2em;
-}
+
 
 .content nav a {
   text-decoration: none;
