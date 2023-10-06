@@ -21,7 +21,7 @@ body {
 }
 
 .segundo {
-  background: gray;
+  background: white;
 }
 
 .tercero {
@@ -30,7 +30,7 @@ body {
 
 #grilla {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 200px 200px 200px;
   grid-gap: 15px;
   margin: 12px 60px;
   height: 100vh;
@@ -55,10 +55,6 @@ canvas {
   margin: 0;
 }
 
-main {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-}
 
 .content nav {
   display: grid;
