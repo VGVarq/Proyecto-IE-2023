@@ -104,5 +104,5 @@ h1 {
   text-align: justify;
   hyphens: auto;
   line-height: 1.32em;
-  grid-template-columns: 1fr 1fr 1fr
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr
 }
