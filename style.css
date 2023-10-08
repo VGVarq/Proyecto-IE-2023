@@ -19,19 +19,20 @@ body {
 /* Estilos para la cuadrícula */
 #grilla {
   display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 20px;
   margin: 12px 60px;
   height: 100vh;
 }
 
-/* Estilos para cada columna */
-.columna {
-  background-color: lightgray;
-  color: blue;
-  text-align: center;
-  padding: 20px;
-  border: 1px solid black;
-  border-radius: 5px;
+/* Estilos para el código en línea */
+code {
+  display: inline-block;
+  word-break: keep-all;
+  font-family: monospace;
+  background-color: rgba(255, 255, 255, 0.338);
+  padding: 0 .5ex;
+  border-radius: .5ex;
 }
 
 /* Estilos para la navegación */
@@ -71,7 +72,7 @@ h1 {
 #contenido.inicio {
   background-color: lightgray;
   color: blue;
-  grid-template-columns: 1fr; /* Solo una columna en escritorio */
+  grid-template-columns: 1fr; /* Solo una columna */
 }
 
 .primero p {
@@ -91,15 +92,4 @@ h1 {
   hyphens: auto;
   line-height: 1.32em;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-}
-
-/* Consulta de medios para dispositivos móviles */
-@media screen and (max-width: 768px) {
-  #grilla {
-    grid-template-columns: 1fr; /* Cambia a una columna en dispositivos móviles */
-  }
-
-  .columna {
-    width: 100%; /* Ocupa todo el ancho disponible en dispositivos móviles */
-  }
 }
