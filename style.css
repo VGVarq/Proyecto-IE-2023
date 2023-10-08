@@ -1,53 +1,40 @@
-/* Importa la fuente 'Mooli' de Google Fonts */
+/* Importación de fuentes */
 @import url('https://fonts.googleapis.com/css2?family=Mooli&display=swap');
 
-/* Define un box model consistente y aplica la fuente 'Mooli' a todos los elementos y al elemento HTML */
+/* Establecer un box model consistente */
 *, *:before, *:after {
   box-sizing: border-box;
 }
 
+/* Estilos globales */
 html {
   font-family: 'Mooli', sans-serif;
 }
 
-/* Elimina los márgenes y el padding predeterminados del navegador para los elementos html y body */
 body {
   margin: 0;
   padding: 0;
 }
 
-.primero {
-  background: green;
-}
-
-.segundo {
-  background: white;
-}
-
-.tercero {
-  background: red;
-}
-
+/* Estilos para la cuadrícula */
 #grilla {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 20px;
   margin: 12px 60px;
-  height: 100vh
-
+  height: 100vh;
 }
 
-code {
-  display: inline-block;
-  word-break: keep-all;
-  font-family: monospace;
-  background-color: rgba(255, 255, 255, 0.338);
-  padding: 0 .5ex;
-  border-radius: .5ex;
+/* Estilos para cada columna */
+.columna {
+  background-color: lightgray;
+  color: blue;
+  text-align: center;
+  padding: 20px;
+  border: 1px solid black;
+  border-radius: 5px;
 }
 
-
-
+/* Estilos para la navegación */
 .content nav a {
   text-decoration: none;
 }
@@ -66,15 +53,15 @@ code {
   box-shadow: 0 -10px 0 black;
 }
 
-/* Establece el tamaño de fuente para los elementos <h1> */
+/* Estilos para encabezados */
 h1 {
-  font-size: 3em; /* Establece el tamaño de fuente en 3em */
+  font-size: 3em;
 }
 
-/* Establece el tamaño de fuente para los elementos <p> dentro del elemento con id="left" */
+/* Estilos para párrafos en diferentes contextos */
 .primero li,
 .primero p {
-  font-size: 1.44vw; /* Establece el tamaño de fuente en 1.44vw */
+  font-size: 1.44vw;
   text-align: justify;
   hyphens: auto;
   line-height: 1.32em;
@@ -84,7 +71,7 @@ h1 {
 #contenido.inicio {
   background-color: lightgray;
   color: blue;
-  grid-template-columns: 1fr; /* Solo una columna */
+  grid-template-columns: 1fr; /* Solo una columna en escritorio */
 }
 
 .primero p {
@@ -92,8 +79,7 @@ h1 {
   line-height: 1.4em;
 }
 
-
-/* Estilos para las otras páginas */
+/* Estilos para otras páginas */
 #contenido.pagina {
   background-color: white;
   color: black;
@@ -104,5 +90,16 @@ h1 {
   text-align: justify;
   hyphens: auto;
   line-height: 1.32em;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+/* Consulta de medios para dispositivos móviles */
+@media screen and (max-width: 768px) {
+  #grilla {
+    grid-template-columns: 1fr; /* Cambia a una columna en dispositivos móviles */
+  }
+
+  .columna {
+    width: 100%; /* Ocupa todo el ancho disponible en dispositivos móviles */
+  }
 }
