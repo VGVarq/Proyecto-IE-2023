@@ -17,15 +17,15 @@ body {
 }
 
 .primero {
-  background: (#5CBF57);
+  background-color: #5CBF57;
 }
 
 .segundo {
-  background: (#FFFFFF);
+  background-color: #FFFFFF;
 }
 
 .tercero {
-  background: (#E14646);
+  background-color: #E14646;
 }
 
 #grilla {
