@@ -71,6 +71,13 @@ h1 {
   font-size: 3em; /* Establece el tamaño de fuente en 3em */
 }
 
+div a {
+  font-weigth: 900;
+  color: white;
+  margin: 1ex 0;
+  display: inline-block;
+  }
+
 div{
     padding: 1em;
      }
