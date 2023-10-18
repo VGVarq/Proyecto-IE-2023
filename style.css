@@ -13,7 +13,7 @@ html {
 /* Elimina los márgenes y el padding predeterminados del navegador para los elementos html y body */
 body {
   margin: 0;
-  padding: 1em;
+  padding: 0;
 }
 
 .primero {
@@ -60,7 +60,7 @@ code {
 }
 
 .content nav a:hover img {
-  width: 100%;
+  width: 80%;
   border-radius: 1ex;
   border: 3px solid black;
   box-shadow: 0 -10px 0 black;
@@ -70,6 +70,10 @@ code {
 h1 {
   font-size: 3em; /* Establece el tamaño de fuente en 3em */
 }
+
+div{
+    padding: 1em;
+     }
 
 /* Establece el tamaño de fuente para los elementos <p> dentro del elemento con id="left" */
 .primero li,
@@ -113,9 +117,6 @@ h1 {
     grid-template-columns: 1fr; /* Cambia a una columna en dispositivos móviles */
   }
   
-  div{
-    padding: 1em;
-     }
 
   .columna {
     width: 100%; /* Ocupa todo el ancho disponible en dispositivos móviles */
