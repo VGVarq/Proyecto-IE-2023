@@ -26,6 +26,7 @@ body {
 
 .tercero {
   background-color: #c22147;
+  grid-template-columns: 1fr 1fr;
 }
 
 #grilla {
