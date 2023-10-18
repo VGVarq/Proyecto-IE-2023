@@ -17,15 +17,15 @@ body {
 }
 
 .primero {
-  background-color: #5CBF57;
+  background-color: #208468;
 }
 
 .segundo {
-  background-color: #FFFFFF;
+  background-color: #ecf7f7;
 }
 
 .tercero {
-  background-color: #E14646;
+  background-color: #c22147;
 }
 
 #grilla {
@@ -60,7 +60,7 @@ code {
 }
 
 .content nav a:hover img {
-  width: 80%;
+  width: 92%;
   border-radius: 1ex;
   border: 3px solid black;
   box-shadow: 0 -10px 0 black;
