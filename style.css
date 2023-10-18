@@ -13,7 +13,7 @@ html {
 /* Elimina los márgenes y el padding predeterminados del navegador para los elementos html y body */
 body {
   margin: 0;
-  padding: 0;
+  padding: 1em;
 }
 
 .primero {
@@ -55,7 +55,7 @@ code {
 .content nav a img {
   width: 100%;
   border-radius: 1ex;
-  margin-bottom: 1ex;
+  margin-bottom: 2ex;
   border: 3px solid transparent;
 }
 
@@ -112,6 +112,10 @@ h1 {
   #grilla {
     grid-template-columns: 1fr; /* Cambia a una columna en dispositivos móviles */
   }
+  
+  div{
+    padding: 1em;
+     }
 
   .columna {
     width: 100%; /* Ocupa todo el ancho disponible en dispositivos móviles */
