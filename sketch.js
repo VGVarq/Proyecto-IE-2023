@@ -40,7 +40,7 @@ class Element {
     // Velocidad en las direcciones X e Y
     this.xSpeed = random(-0.1, 0.1);
     this.ySpeed = random(-0.1, 0.1);
-    // Color semi-transparente en tonos rosados y violetas
+    // Color semi-transparente en tonos grises
     this.c = color(random(0, 255), 50);
   }
   
