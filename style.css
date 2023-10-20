@@ -10,6 +10,13 @@ html {
   font-family: 'Mooli', sans-serif;
 }
 
+.p5Canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
 /* Elimina los márgenes y el padding predeterminados del navegador para los elementos html y body */
 body {
   margin: 0;
