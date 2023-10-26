@@ -100,13 +100,6 @@ div{
   line-height: 1.32em;
 }
 
-/* Estilos para la página de inicio */
-#contenido.inicio {
-  background-color: lightgray;
-  color: blue;
-  grid-template-columns: 1fr; /* Solo una columna */
-}
-
 .primero p {
   font-size: 1em;
   line-height: 1.4em;
