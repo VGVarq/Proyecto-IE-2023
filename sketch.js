@@ -3,7 +3,8 @@ let elements = [];
 
 function setup() {
   // Crear un lienzo canvas del tamaño de la ventana
-  let cnv = createCanvas(windowWidth, windowHeight);
+  let altura = document.getElementById("contenido").offsetHeight;
+  let cnv = createCanvas(windowWidth, altura);
   // Colocar el lienzo dentro del elemento con id "body" en el HTML
   cnv.parent("contenido");
   
