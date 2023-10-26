@@ -5,10 +5,10 @@ function setup() {
   // Crear un lienzo canvas del tamaño de la ventana
   let cnv = createCanvas(windowWidth, windowHeight);
   // Colocar el lienzo dentro del elemento con id "body" en el HTML
-  cnv.parent("body");
+  cnv.parent("contenido");
   
   // Generar 1000 elementos y agregarlos al arreglo "elements"
-  for (let i = 0; i < 1000; i++) {
+  for (let i = 0; i < 2000; i++) {
     elements.push(new Element(random(width), random(height)));
   }
   
