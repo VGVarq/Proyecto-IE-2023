@@ -10,8 +10,14 @@ html {
   font-family: 'Mooli', sans-serif;
 }
 
+header{
+  position: relative;
+  z-index: 10;
+}
+
+
 .p5Canvas {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   z-index: 0;
@@ -24,17 +30,27 @@ body {
 }
 
 .primero {
-  background-color: #208468;
+  background-color: #20846881;
 }
 
 .segundo {
-  background-color: #e3ddd3;
+  background-color: #e5e9e29b;
 }
 
 .tercero {
-  background-color: #c22147;
-  grid-template-columns: 1fr 1fr;
+  background-color: #c2214782;
 }
+
+.grid-gallery{
+  display: grid;
+  grid-template-columns: 1fr 1fr ;
+  grid-gap: .5em
+}
+
+.grid-gallery img{
+  width: 100%;
+}
+
 
 #grilla {
   display: grid;
@@ -88,7 +104,7 @@ div a {
   }
 
 div{
-    padding: 1em;
+    padding: .5em;
      }
 
 /* Establece el tamaño de fuente para los elementos <p> dentro del elemento con id="left" */
